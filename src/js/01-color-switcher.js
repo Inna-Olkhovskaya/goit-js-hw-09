@@ -3,16 +3,16 @@ const stopBtn = document.querySelector('[data-stop]');
 let timerId = null;
 
 startBtn.addEventListener('click', () => {
-    startBtn.disabled = true;
-    stopBtn.disabled = false;
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
   timerId = setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 });
 
 stopBtn.addEventListener('click', () => {
-    startBtn.disabled = false;
-    stopBtn.disabled = true;
+  startBtn.disabled = false;
+  stopBtn.disabled = true;
   clearInterval(timerId);
 });
 
